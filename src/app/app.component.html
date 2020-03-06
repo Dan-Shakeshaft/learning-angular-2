@@ -1,0 +1,23 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        <h3>App Component</h3>
+        <hr>
+        <app-servers></app-servers>
+        <div app-servers></div>
+        <div class="app-servers"></div> 
+    </div>
+  </div>
+</div>
+ -->
+
+ <app-header (featureSelected)="onNavigate($event)"></app-header>
+
+ <div class="container">
+   <div class="row">
+     <div class="col-md-12">
+       <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+       <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+     </div>
+   </div>
+ </div>
